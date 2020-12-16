@@ -2,7 +2,7 @@
 
 # Le DOM (Document Object Model)
 
-## Le DOM
+## Le DOM (chapitre_1)
 Le DOM definit la structure d'une page et le moyen d'interagir avec elle : il s'agit d'une interface de programmation, ou API (Application Programming Interface).
 
 * Creation de la **page html** du chapitre_1. Une page html a la structure suivante:
@@ -10,7 +10,7 @@ Le DOM definit la structure d'une page et le moyen d'interagir avec elle : il s'
 ![dom_html](./resources/com_html.bmp)
 
 * Chaque entite de l'arborescence est appelee un noeud (node). On distingue deux types de noeud :
-    * Ceux (en bleu) qui correspondent à des elements HTML, comme `<body>` ou `<p>`. Ces noeud peuvent avoir des sous-noeud, appeles fils ou enfants(children).
+    * Ceux (en bleu) qui correspondent a des elements HTML, comme `<body>` ou `<p>`. Ces noeud peuvent avoir des sous-noeud, appeles fils ou enfants(children).
     * Ceux (en rouge) qui correspondent au contenu textuel de la page. Ces noeud ne peuvent pas avoir de fils.
 
 
@@ -85,4 +85,16 @@ afficherEnfant(document.body.childNodes[0], 0);
 ```
 ![tp1](./resources/tp1.bmp)
 
-## Parcourir le DOM
+## Parcourir le DOM (chapitre_2)
+
+* Plutot que de parcourir le DOM noeud par noeud, on peut acceder rapidement a un ou plusieurs elements en utilisant des methodes de selection.
+* Les methodes `getElementsByTagName`, `getElementsByClassName` et `getElementById` permettent respectivement de rechercher des elements par nom de balise, par classe et par identifiant. Les deux premieres methodes renvoient une liste, la derniere renvoie un seul element.
+* Les methodes `querySelectorAll` et `querySelector` permettent de rechercher des elements en utilisant un selecteur CSS. La premiere methode renvoie tous les elements correspondants, la seconde renvoie uniquement le premier.
+* La propriete `innerHTML` renvoie le contenu HTML d'un element. La propriete `textContent` renvoie son contenu textuel, sans le balisage HTML.
+* Les methodes `getAttribute` et `hasAttribute` permettent d'acceder aux attributs d'un element.
+* La propriete `classList` et sa methode `contains` permettent d'acceder aux classes d'un element.
+
+![tp2](./resources/chap_2.bmp)
+
+## Modifier la structure de la page
+
