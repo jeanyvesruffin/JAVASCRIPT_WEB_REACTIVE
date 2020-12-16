@@ -95,6 +95,7 @@ afficherEnfant(document.body.childNodes[0], 0);
 * La propriete `classList` et sa methode `contains` permettent d'acceder aux classes d'un element.
 
 ![tp2](./resources/chap_2.bmp)
+![tp2_bis](./resources/chap_2_bis.bmp)
 
 ## Modifier la structure de la page
 
