@@ -99,3 +99,22 @@ afficherEnfant(document.body.childNodes[0], 0);
 
 ## Modifier la structure de la page
 
+* Les proprietes `innerHTML`, `textContent` et `classList` ainsi que la methode `setAttribute` permettent de modifier les informations d'un element du DOM.
+* La creation d'un nouveau noeud s'effectue avec les methodes `createTextNode` pour un noeud textuel et `createElement` pour un element.
+* La methode `appendChild` permet d'inserer un nouveau noeud comme dernier enfant d'un element du DOM.
+* Les methodes `insertBefore` et `insertAdjacentHTML` offrent des possibilites alternatives pour ajouter du contenu.
+* On peut remplacer un noeud existant avec la methode `replaceChild` ou le supprimer avec `removeChild`.
+* La manipulation du DOM en JavaScript doit se faire de maniere raisonnee afin de ne pas degrader les performances.
+
+[journaux TP_3.html](./chapitre_3/HTML/journaux.html)
+[journaux TP_3.JS](./chapitre_3/JS/journaux.js)
+
+[dictionnaire TP_3.html](./chapitre_3/HTML/dictionnaire.html)
+[dictionnaire TP_3.JS](./chapitre_3/JS/dictionnaire.js)
+
+
+## Donner du style a vos elements
+
+* La propriete JavaScript `style` represente l'attribut `style` d'un element du DOM. Elle permet de modifier le style de cet element en definissant la valeur de ses proprietes CSS.
+* Les proprietes CSS composees s'ecrivent avec la norme `camelCase` en JavaScript. Par exemple, `font-family` devient `fontFamily`.
+* La propriete JavaScript `style` est insuffisante pour acceder au style d'un element. Pour cela, on utilise la fonction `getComputedStyle`.
