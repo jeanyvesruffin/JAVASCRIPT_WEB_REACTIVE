@@ -35,6 +35,7 @@ for (let index = 0; index < mots.length; index++) {
 let dlElt = document.createElement("dl"); // Création de la liste
 
 // Pour chaque mot, on construit une balise <dt> avec le terme et une balise <dd> avec sa définition
+
 mots.forEach(function(mot) {
     let dtElt = document.createElement("dt");
     let strongElt = document.createElement("strong");

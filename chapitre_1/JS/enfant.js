@@ -1,6 +1,6 @@
 /* TP:1 */
 
-function afficherEnfant(noeud, indice) {
+afficherEnfant = (noeud, indice) => {
     // Condition si c'est un noeud du DOM
     if (noeud.nodeType === document.ELEMENT_NODE) {
         // console.log("Je suis un noeud du DOM");

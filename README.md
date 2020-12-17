@@ -1,8 +1,29 @@
 # JAVASCRIPT_WEB_REACTIVE
+<!-- TOC -->
 
+- [JAVASCRIPT_WEB_REACTIVE](#javascript_web_reactive)
+- [Le DOM (Document Object Model)](#le-dom-document-object-model)
+    - [Le DOM (chapitre_1)](#le-dom-chapitre_1)
+    - [TP](#tp)
+    - [Parcourir le DOM (chapitre_2)](#parcourir-le-dom-chapitre_2)
+    - [Modifier la structure de la page (chapitre_3)](#modifier-la-structure-de-la-page-chapitre_3)
+    - [Donner du style a vos elements (chapitre_4)](#donner-du-style-a-vos-elements-chapitre_4)
+- [Interaction avec les utilisateurs (chapitre_5)](#interaction-avec-les-utilisateurs-chapitre_5)
+    - [Reagir aux evenements](#reagir-aux-evenements)
+
+<!-- /TOC -->
 # Le DOM (Document Object Model)
 
 ## Le DOM (chapitre_1)
+
+
+[cours.html](./chapitre_1/HTML/cours.html)
+[cours.JS](./chapitre_1/JS/cours.js)
+
+[Exercice enfant.html](./chapitre_1/HTML/enfant.html)
+[Exercice enfant.JS](./chapitre_1/JS/enfant.js)
+
+
 Le DOM definit la structure d'une page et le moyen d'interagir avec elle : il s'agit d'une interface de programmation, ou API (Application Programming Interface).
 
 * Creation de la **page html** du chapitre_1. Une page html a la structure suivante:
@@ -63,7 +84,7 @@ console.log(noeud1.parentNode)
 
 [node_MDN](https://developer.mozilla.org/fr/docs/Web/API/Node)
 
-## TP 1
+## TP
 
 ```js
 function afficherEnfant(noeud, indice) {
@@ -97,7 +118,17 @@ afficherEnfant(document.body.childNodes[0], 0);
 ![tp2](./resources/chap_2.bmp)
 ![tp2_bis](./resources/chap_2_bis.bmp)
 
-## Modifier la structure de la page
+[cours.html](./chapitre_2/HTML/cours.html)
+[cours.JS](./chapitre_2/JS/cours.js)
+
+[Exercice enfant.html](./chapitre_2/HTML/instruments.html)
+[Exercice enfant.JS](./chapitre_2/JS/instruments.js)
+
+
+[Exercice reve.html](./chapitre_2/HTML/reve.html)
+[Exercice reve.JS](./chapitre_2/JS/reve.js)
+
+## Modifier la structure de la page (chapitre_3)
 
 * Les proprietes `innerHTML`, `textContent` et `classList` ainsi que la methode `setAttribute` permettent de modifier les informations d'un element du DOM.
 * La creation d'un nouveau noeud s'effectue avec les methodes `createTextNode` pour un noeud textuel et `createElement` pour un element.
@@ -106,15 +137,60 @@ afficherEnfant(document.body.childNodes[0], 0);
 * On peut remplacer un noeud existant avec la methode `replaceChild` ou le supprimer avec `removeChild`.
 * La manipulation du DOM en JavaScript doit se faire de maniere raisonnee afin de ne pas degrader les performances.
 
-[journaux TP_3.html](./chapitre_3/HTML/journaux.html)
-[journaux TP_3.JS](./chapitre_3/JS/journaux.js)
+[cours.html](./chapitre_3/HTML/cours.html)
+[cours.JS](./chapitre_3/JS/cours.js)
 
-[dictionnaire TP_3.html](./chapitre_3/HTML/dictionnaire.html)
-[dictionnaire TP_3.JS](./chapitre_3/JS/dictionnaire.js)
+[Exercice journaux.html](./chapitre_3/HTML/journaux.html)
+[Exercice journaux.JS](./chapitre_3/JS/journaux.js)
+
+[Exercice dictionnaire.html](./chapitre_3/HTML/dictionnaire.html)
+[Exercice dictionnaire.JS](./chapitre_3/JS/dictionnaire.js)
 
 
-## Donner du style a vos elements
+## Donner du style a vos elements (chapitre_4)
+
+[Correspondance de style CSS Javascript](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+
 
 * La propriete JavaScript `style` represente l'attribut `style` d'un element du DOM. Elle permet de modifier le style de cet element en definissant la valeur de ses proprietes CSS.
 * Les proprietes CSS composees s'ecrivent avec la norme `camelCase` en JavaScript. Par exemple, `font-family` devient `fontFamily`.
 * La propriete JavaScript `style` est insuffisante pour acceder au style d'un element. Pour cela, on utilise la fonction `getComputedStyle`.
+
+[cours.html](./chapitre_4/HTML/cours.html)
+[cours.JS](./chapitre_4/JS/cours.js)
+[cours.CSS](./chapitre_4/CSS/cours.css)
+
+[Exercice couleurs.html](./chapitre_4/HTML/couleurs.html)
+[Exercice couleurs.JS](./chapitre_4/JS/couleurs.js)
+
+[Exercice infos.html](./chapitre_4/HTML/infos.html)
+[Exercice infos.JS](./chapitre_4/JS/infos.js)
+[Exercice infos.css](./chapitre_4/CSS/infos.css)
+
+
+# Interaction avec les utilisateurs (chapitre_5)
+
+## Reagir aux evenements
+
+* On peut rendre une page web interactive en ecrivant du code JavaScript qui reagit aux evenements declenches sur la page.
+* De nombreux types d'evenements peuvent etre geres. Chaque type d'evenement est associe a un objet `Event` specifique qui apporte des informations sur l'evenement via ses proprietes.
+* Les evenements `keypress`, `keydown` et `keyup` permettent de reagir a l'utilisation du clavier.
+* Les evenements `click`, `mousedown` et `mouseup` permettent de gerer les interactions avec la souris.
+* Le chargement et la fermeture de la page web sont associes aux evenements `load` et `beforeunload`.
+* Un evenement se propage dans l'arborescence du DOM depuis son noeud d'origine jusqu'a la racine du document. Cette propagation peut etre interrompue a l'aide de la methode `stopPropagation`.
+* Il est possible d'annuler le comportement par defaut lie a un evenement en appelant la methode `preventDefault`. 
+
+[cours.html](./chapitre_5/HTML/cours.html)
+[cours.JS](./chapitre_5/JS/cours.js)
+
+[Exercice couleurs.html](./chapitre_5/HTML/couleurs.html)
+[Exercice couleurs.JS](./chapitre_5/JS/couleurs.js)
+
+[Exercice compteurClics.html](./chapitre_5/HTML/compteurClics.html)
+[Exercice compteurClics.JS](./chapitre_5/JS/compteurClics.js)
+
+[Exercice desserts.html](./chapitre_5/HTML/desserts.html)
+[Exercice desserts.JS](./chapitre_5/JS/desserts.js)
+
+[Exercice quizz.html](./chapitre_5/HTML/desserts.html)
+[Exercice quizz.JS](./chapitre_5/JS/desserts.js)
