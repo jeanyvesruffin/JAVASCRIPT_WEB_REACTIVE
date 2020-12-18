@@ -192,5 +192,18 @@ afficherEnfant(document.body.childNodes[0], 0);
 [Exercice desserts.html](./chapitre_5/HTML/desserts.html)
 [Exercice desserts.JS](./chapitre_5/JS/desserts.js)
 
-[Exercice quizz.html](./chapitre_5/HTML/desserts.html)
-[Exercice quizz.JS](./chapitre_5/JS/desserts.js)
+[Exercice quiz.html](./chapitre_5/HTML/quiz.html)
+[Exercice quiz.JS](./chapitre_5/JS/quiz.js)
+
+## Manipuler des tableaux
+
+* Les formulaires permettent de faire saisir des informations dans une page web. Les donnees saisies sont souvent destinees a être envoyees a un serveur web. Avant cet envoi, on peut utiliser JavaScript pour interagir avec les informations du formulaire pour enrichir et/ou controler la saisie.
+* Les zones de texte (balises `<input type="text">` et `<textarea>` ) possedent une propriete `value` pour acceder a la valeur saisie.
+* Lorsqu'une zone de texte est la cible de saisie, on dit que cette zone possede le focus. Les evenements `focus` et `blur` se declenchent en cas d'acquisition et de perte du focus. Les methodes `focus` et `blur` permettent de modifier la cible de saisie depuis JavaScript.
+* Les elements d'option (cases a cocher, boutons radio et listes deroulantes) generent un evenement `change` lorsque l'utilisateur modifie son choix. 
+* L'element du DOM correspondant au formulaire possede une propriete `elements` qui permet d'acceder a ses champs de saisie.
+* La soumission d'un formulaire entraîne l'apparition d'un evenement `submit` sur le formulaire. Dans le gestionnaire d'evenement associe, on peut annuler l'envoi des donnees en appelant la methode `preventDefault` sur l'objet `Event` associe a l'evenement.
+* Toute modification de la valeur saisie dans une zone de texte declenche l'apparition d'un evenement `input`, qui peut être exploite pour valider la saisie en temps reel.
+* On peut utiliser une expression reguliere pour controler finement la conformite d'une chaine de caracteres par rapport a un format attendu.
+
+[REGEX REFERENCES](https://regex101.com/)

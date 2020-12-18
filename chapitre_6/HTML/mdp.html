@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de mots de passe</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <label for="mdp1">Saisissez le mot de passe</label> :
+            <input type="password" name="mdp1" id="mdp1" required>
+        </p>
+        <p>
+            <label for="mdp2">Confirmez le mot de passe</label> :
+            <input type="password" name="mdp2" id="mdp2" required>
+        </p>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <p id="infoMdp"></p>
+
+    <script src="../js/mdp.js"></script>
+</body>
+
+</html>
